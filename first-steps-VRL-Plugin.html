@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link type="text/css" rel="stylesheet" href="resources/css/vrl-documentation.css"/>
+</head>
+<body>
+
+<h1 id="yourfirststepsbeforeyoullstartwiththevrl-plugin:">Your first steps before you&#8217;ll start with the VRL - Plugin:</h1>
+
+<h2 id="contents">Contents</h2>
+
+<ul>
+<li><a href="#installnetbeans">Install NetBeans</a> (your work-environment for java programming)</li>
+<li><a href="#creatinganewuser">Creating a new user</a> at github.com and clone repository miho/VRL</li>
+<li>Install <a href="#markdown">Markdown</a> (to write your documentation)</li>
+</ul>
+
+<h2 id="installnetbeans">Install NetBeans</h2>
+
+<ol>
+<li>Download and instal Java (JDK) &gt;=1.6, for example from: <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>.</li>
+<li>Download and install a suitable version (&gt;=7.01) of NetBeans, for example from: <a href="http://netbeans.org/downloads/">http://netbeans.org/downloads/</a>.</li>
+</ol>
+
+<p><a href="http://openbook.galileocomputing.de/javainsel/">Recommended literature for java-programming</a>.</p>
+
+<h2 id="creatinganewuser">Creating a new user at GitHub</h2>
+
+<p>GitHub is a web-based hosting service for software development projects that use the Git revision control system. <a href="http://git-scm.com/doc">Documentation</a>.</p>
+
+<ul>
+<li><p>Go to <a href="https://github.com/">GitHub</a> and:
+Pick a username; Your email; Create a password, click on <code>Sign up for free</code>;</p></li>
+<li><p>Find repository of VRL-Project. Enter miho / VRL in search mask on the top left of the page:
+(see Figure <a href="resources/img/Repository-VRL-Project.png">Repository of VRL-Project</a>); <code>Enter</code>:</p></li>
+</ul>
+
+<figure>
+<img src="resources/img/Repository-VRL-Project.png" alt="Repository of VRL-Project" id="repositoryofvrl-project" style="width:981px;" />
+<figcaption>Repository of VRL-Project</figcaption></figure>
+
+
+
+<ul>
+<li>Open NetBeans;</li>
+<li>Go to the top menu Team -&gt; Git -&gt; Clone (to clone repository);</li>
+</ul>
+
+<figure>
+<img src="resources/img/NetBeans-Git-Clone.png" alt="NetBeans-Git-Clone" id="netbeans-git-clone" style="width:981px;" />
+<figcaption>NetBeans-Git-Clone</figcaption></figure>
+
+
+
+<ul>
+<li>Copy from GitHub the link https://github.com/miho/VRL.git and insert into your open window &#8220;Clone Repository&#8221;; also User und Password; click on <code>Next</code>;</li>
+</ul>
+
+<figure>
+<img src="resources/img/Clone-VRL-Repository.png" alt="Clone-VRL-Repository" id="clone-vrl-repository" style="width:981px;" />
+<figcaption>Clone-VRL-Repository</figcaption></figure>
+
+
+
+<ul>
+<li>Then choose &#8220;master&#8221;; then <code>Next</code>; then <code>Finish</code>.</li>
+<li>Compile in NetBeans the Project VRL.</li>
+<li>Repeat it for VRL-Studio.</li>
+</ul>
+
+<figure>
+<img src="resources/img/run-project.png" alt="Run VRL, VRL-Sudio" id="runvrlvrl-sudio" style="width:981px;" />
+<figcaption>Run VRL, VRL-Sudio</figcaption></figure>
+
+
+
+<h3 id="additionalimportantfunctionsofgithub:">Additional important functions of GitHub:</h3>
+
+<ul>
+<li>to load your changing version of the project in GitHub:
+right mouse-click on your project in NetBeans -&gt; Git -&gt; Commit&#8230;</li>
+</ul>
+
+<figure>
+<img src="resources/img/chang-project-load.png" alt="Commit Project" id="commitproject" style="width:980px;" />
+<figcaption>Commit Project</figcaption></figure>
+
+
+
+<ul>
+<li>to clone repository (fetch latest version):
+right mouse-click on your project in NetBeans -&gt; Git -&gt; Checkout -&gt; Checkout Revision&#8230;</li>
+</ul>
+
+<figure>
+<img src="resources/img/checkout-project.png" alt="Checkout Project" id="checkoutproject" style="width:981px;" />
+<figcaption>Checkout Project</figcaption></figure>
+
+
+
+<h2 id="markdown">Markdown</h2>
+
+<p>Markdown is a lightweight markup language, allowing people “to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML).</p>
+
+<p>You need it in order to write your documentation.</p>
+
+<ol>
+<li><p>Install Markdown, for example from: <a href="http://markdown.softpedia.com">http://markdown.softpedia.com</a>.</p></li>
+<li><p>Instal txt-Editor, for example TextMate, from: <a href="http://textmate.softonic.de/mac">http://textmate.softonic.de/mac</a>.
+For Info:
+Table with Styles for VRL-Projects you can find in your VRL -&gt; Source Packages -&gt; eu.mihosoft.vrl.rootplugin.content.help -&gt; help.zip -&gt; resources.css -&gt; vrl-documentation.css</p></li>
+<li><p>Write your documentation in txt-Editor and save it &#8220;name.md&#8221;
+Call the Terminal, run the MarkDown, compile your file &#8220;name.md and produce new file &#8221;name.html&quot;.</p>
+
+<p>Example: <code>gcscuser06-iMac:~ user$ multimarkdown -o name.html -t html name.md</code></p></li>
+</ol>
+
+</body>
+</html>
