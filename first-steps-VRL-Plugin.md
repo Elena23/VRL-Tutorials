@@ -68,14 +68,14 @@ GitHub is a web-based hosting service for software development projects that use
 
 
 
-## Markdown  [Markdown]
+## Markdown  [Markdown] 
 Markdown is a lightweight markup language, allowing people “to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML).
 
 You need it in order to write your documentation.
 
-1. Install Markdown, for example from: [http://markdown.softpedia.com](http://markdown.softpedia.com).
+1. Install Markdown, for example from: [hhttp://fletcherpenney.net/multimarkdown/download/](http://fletcherpenney.net/multimarkdown/download/).
 
-2. Instal txt-Editor, for example TextMate, from: [http://textmate.softonic.de/mac](http://textmate.softonic.de/mac). 
+2. Install txt-Editor, for example TextMate, from: [http://textmate.softonic.de/mac](http://textmate.softonic.de/mac). 
 	For Info: 
 	Table with Styles for VRL-Projects you can find in your VRL -> Source Packages -> eu.mihosoft.vrl.rootplugin.content.help -> help.zip -> resources.css -> vrl-documentation.css
 3.  Write your documentation in txt-Editor and save it "name.md"
