@@ -6,14 +6,22 @@
 </head>
 <body>
 
-<h1 id="yourfirststepsbeforeyoullstartwiththevrl-plugin:">Your first steps before you&#8217;ll start with the VRL - Plugin:</h1>
+<h1 id="yourfirststepsbeforeyoustartwiththevrl-plugin:">Your first steps before you start with the VRL - Plugin:</h1>
 
 <h2 id="contents">Contents</h2>
 
 <ul>
-<li><a href="#installnetbeans">Install NetBeans</a> (your work-environment for java programming)</li>
-<li><a href="#creatinganewuser">Creating a new user</a> at github.com and clone repository miho/VRL</li>
-<li>Install <a href="#markdown">Markdown</a> (to write your documentation)</li>
+<li><a href="#installnetbeans">Install NetBeans</a> (your work-environment for java programming).</li>
+<li><a href="resources/img/github-creatin-new-user.png">Creating a new user</a> at GitHub (https://github.com).</li>
+<li><a href="#choose">Choose</a> whether you want to work just on the plugins for VRL-Studio or also change the code at VRL, VRL-Studio.
+
+<ul>
+<li><a href="#fetchcompiledversion">fetch compiled version</a> of VRL from the web-page.</li>
+<li><a href="#clonerepository">clone repository</a> miho/VRL, miho/VRL-Studio from GitHub.</li>
+<li><a href="resources/img/fork-miho-VRL.png">fork repository</a>.</li>
+</ul></li>
+<li><a href="#additionalimportantfunctions">Additional important functions</a> of GitHub.</li>
+<li>Install <a href="#markdown">Markdown</a> (to write your documentation).</li>
 </ul>
 
 <h2 id="installnetbeans">Install NetBeans</h2>
@@ -30,10 +38,40 @@
 <p>GitHub is a web-based hosting service for software development projects that use the Git revision control system. <a href="http://git-scm.com/doc">Documentation</a>.</p>
 
 <ul>
-<li><p>Go to <a href="https://github.com/">GitHub</a> and:
-Pick a username; Your email; Create a password, click on <code>Sign up for free</code>;</p></li>
-<li><p>Find repository of VRL-Project. Enter miho / VRL in search mask on the top left of the page:
-(see Figure <a href="resources/img/Repository-VRL-Project.png">Repository of VRL-Project</a>); <code>Enter</code>:</p></li>
+<li>Go to <a href="https://github.com/">GitHub</a> and:
+Pick a username; Your email; Create a password, click on <code>Sign up for free</code>;</li>
+</ul>
+
+<figure>
+<img src="resources/img/github-creatin-new-user.png" alt="Creating a new user" id="creatinganewuser" style="width:980px;" />
+<figcaption>Creating a new user</figcaption></figure>
+
+
+
+<p>For a better understanding of how GitHub works, look at the page: <a href="http://ndpsoftware.com/git-cheatsheet.html">http://ndpsoftware.com/git-cheatsheet.html</a>.</p>
+
+<h2 id="choose:">Choose:</h2>
+
+<h3 id="workingjustontheplugins1.or2.">working just on the plugins (1. or 2.)</h3>
+
+<h3 id="choose">or also on VRL, VRL-Studio (3.)</h3>
+
+<h2 id="">1.</h2>
+
+<p>If you want to work only on the plugins for VRL-Studio and you&#8217;re not reliant on latest version, then:</p>
+
+<h3 id="fetchcompiledversion">fetch compiled version of VRL from the web-page: <a href="http://vrl-studio.mihosoft.eu">http://vrl-studio.mihosoft.eu</a></h3>
+
+<h2 id="">2.</h2>
+
+<p>If you want to work only on the plugins for VRL-Studio and you&#8217;re reliant on latest version, then:</p>
+
+<h3 id="clonerepository">clone repository from GitHub:</h3>
+
+<ul>
+<li>Find repository of VRL-Project. Enter miho/VRL in search mask on the top left of the page:
+(see Figure <a href="resources/img/Repository-VRL-Project.png">Repository of VRL-Project</a>); <code>Enter</code>.</li>
+<li>Copy from GitHub the link below &#8220;Git Read-Only&#8221; (for example: https://github.com/miho/VRL.git):</li>
 </ul>
 
 <figure>
@@ -54,7 +92,7 @@ Pick a username; Your email; Create a password, click on <code>Sign up for free<
 
 
 <ul>
-<li>Copy from GitHub the link https://github.com/miho/VRL.git and insert into your open window &#8220;Clone Repository&#8221;; also User und Password; click on <code>Next</code>;</li>
+<li>Insert into your open window &#8220;Clone Repository&#8221;; also User und Password; click on <code>Next</code>;</li>
 </ul>
 
 <figure>
@@ -66,7 +104,7 @@ Pick a username; Your email; Create a password, click on <code>Sign up for free<
 <ul>
 <li>Then choose &#8220;master&#8221;; then <code>Next</code>; then <code>Finish</code>.</li>
 <li>Compile in NetBeans the Project VRL.</li>
-<li>Repeat it for VRL-Studio.</li>
+<li>Repeat for VRL-Studio.</li>
 </ul>
 
 <figure>
@@ -75,11 +113,35 @@ Pick a username; Your email; Create a password, click on <code>Sign up for free<
 
 
 
-<h3 id="additionalimportantfunctionsofgithub:">Additional important functions of GitHub:</h3>
+<p>Now you have everything to write the VRL-Plugins. <a href="first-plugin.html">Next see here</a>.</p>
+
+<h2 id="">3.</h2>
+
+<p>If you want to work also on the plugins as well as on VRL and VRL-Studio, then:</p>
+
+<h3 id="forkrepository">fork repository from GitHub:</h3>
+
+<ul>
+<li>find repository of VRL-Project. Enter miho/VRL in search mask on the top left of the page;<code>Enter</code>;</li>
+<li>fork repository of VRL-Project (click on the button &#8220;Fork&#8221; above right) and wait:
+<img src="resources/img/fork-miho-VRL.png" alt="fork repository" id="forkrepository" style="width:980px;" /></li>
+</ul>
+
+<ul>
+<li>and then clone repository &#8220;your-name/VRL&#8221;, &#8220;your-name/VRL-Studio&#8221; from GitHub, similar to this: <a href="#clonerepository">clone repository</a>.</li>
+</ul>
+
+<h2 id="additionalimportantfunctions">Additional important functions of GitHub:</h2>
 
 <ul>
 <li>to load your changing version of the project in GitHub:
-right mouse-click on your project in NetBeans -&gt; Git -&gt; Commit&#8230;</li>
+right mouse-click on your project in NetBeans
+
+<ul>
+<li>-&gt; Git -&gt; Add; then</li>
+<li>-&gt; Git -&gt; Commit&#8230; then</li>
+<li>-&gt; Git Remote -&gt; Push.</li>
+</ul></li>
 </ul>
 
 <figure>
@@ -98,6 +160,8 @@ right mouse-click on your project in NetBeans -&gt; Git -&gt; Checkout -&gt; Che
 <figcaption>Checkout Project</figcaption></figure>
 
 
+
+<p>For more information see Git - Documentation here: <a href="http://git-scm.com/doc">http://git-scm.com/doc</a>.</p>
 
 <h2 id="markdown">Markdown</h2>
 
