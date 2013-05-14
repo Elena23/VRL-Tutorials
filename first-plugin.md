@@ -155,71 +155,76 @@ To export your whole VRL-Project (with plugins):
 -----
 
 
-####you can also load the example plugin from GitHub:  [VRL-Tutorial-Plugin-01.git](https://github.com/Elena23/VRL-Tutorial-Plugin-01.git) ####
+####you can also load the example plugin from GitHub:  [Test-VRL-Tut-Plugin-01.zip](https://github.com/Elena23/VRL-Tutorials/blob/master/Test-VRL-Tut-Plugin-01.zip) ####
 
 
 ## Commiting your new Plugin in GitHub [Commiting your new Plugin in GitHub]##
 
-####1. Initialise Git-Repository local:####
-
- Open the Terminal and write:
-
-		cd NetBeansProjects/Test-VRL-Tut-Plugin-01 
-// it means that you go to the directory where your plugin is located, the Adress you can see in NetBeans in Project Properties;
-
-		ls -la
-// it shows all files in this directory
-
-		git init 
- // it means that you Initialise Git-Repository
- 
-		git status
-// it shows the status
-
-
-![git-init][]
-
-[git-init]: resources/img/git-init.png width=980px	
-
-####2. Create your new Repository in GitHub:####
+###1. Create your new Repository in GitHub:###
 
 - Login you at GitHub
 - Click upper right on book icon "Create a new repo";
-- Write the name of repository (for example: Test-VRL-Tutorial-Plugin-01):
+- Write the name of repository (for example: Your-Repository-01):
 
 ![create-repository][]
 
 [create-repository]: resources/img/create-repository.png width=980px
 
 - ->`Create repository` 
-####3. Commiting your new Plugin (or changing version) in GitHub:####
+
+- copy the git-adress (for git remote add ...):
+
+![git-address][]
+
+[git-address]: resources/img/git-address.png width=980px
+
+
+###2. Initialize a git repository for the project local and push it to github:###
+
+ Open the Terminal on your computer and write:
+
+		cd NetBeansProjects/Test-VRL-Tut-Plugin-01 
+// it means that you go to the directory where your plugin is located, the Adress you can see in NetBeans in Project Properties;
+
+![git-init][]
+
+[git-init]: resources/img/git-init.png width=980px	
+
+		git init 
+ // it means that you Initialise Git-Repository local;
+  		   
+		git add .
+		git commit -a -m "your commentar"
+		git remote add origin git@github.com:Elena23/Your-Repository-01.git
+		git push -u origin master 
+ // Initialize a new git repository local, then stage all the files in the directory, then commit the initial snapshot and finally push it into GitHub;
+  
+
+####Finish! Now is your plugin in GitHub!###
+  
+  
+  
+This commands can help you:  
+
+		cd ../ 
+// to back out one level out of the current directory;
  
- Write next in Terminal:
+		ls -la
+// it shows all files in this directory;
 
-		git fetch 
-// it means that the files fetched from Local repository into Git;
-
-		git pull origin master
-// it means that the files fetched from Git into Workspace;
-
-		git add
 		git status
-		git git commit -m "first commit"
- // it commited the files
- 
-		git push origin master
-// it pushed the files into branch master
+// it shows the status;
 
- 
-Finish! Now is your plugin in GitHub!  
- 
---------------
+		man git 
+// this is Git Manual 
 
-##Commiting your new Plugin into GitHub from NetBeans:##
- 
-- VRL-Tutorial-Plugin-01 -> Git -> Add;
-- VRL-Tutorial-Plugin-01 -> Git -> Commit...;
-- VRL-Tutorial-Plugin-01 -> Git -> Checkout -> Checkout Revision... ; Reveision:master -> Select -> Checkout
+//Click 'q' to get out of Manual;
+
+
+
+For other Git-Commands look here:  
+[Git Cheat Sheet](https://na1.salesforce.com/help/doc/en/salesforce_git_developer_cheatsheet.pdf)
+
 
 
 

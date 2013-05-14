@@ -181,46 +181,16 @@ public void init(InitPluginAPI iApi) {
 
 <hr />
 
-<h4 id="youcanalsoloadtheexamplepluginfromgithub:vrl-tutorial-plugin-01.git">you can also load the example plugin from GitHub: <a href="https://github.com/Elena23/VRL-Tutorial-Plugin-01.git">VRL-Tutorial-Plugin&#8211;01.git</a></h4>
+<h4 id="youcanalsoloadtheexamplepluginfromgithub:test-vrl-tut-plugin-01.zip">you can also load the example plugin from GitHub: <a href="https://github.com/Elena23/VRL-Tutorials/blob/master/Test-VRL-Tut-Plugin-01.zip">Test-VRL-Tut-Plugin&#8211;01.zip</a></h4>
 
 <h2 id="commitingyournewpluginingithub">Commiting your new Plugin in GitHub</h2>
 
-<h4 id="initialisegit-repositorylocal:">1. Initialise Git-Repository local:</h4>
-
-<p>Open the Terminal and write:</p>
-
-<pre><code>    cd NetBeansProjects/Test-VRL-Tut-Plugin-01 
-</code></pre>
-
-<p>// it means that you go to the directory where your plugin is located, the Adress you can see in NetBeans in Project Properties;</p>
-
-<pre><code>    ls -la
-</code></pre>
-
-<p>// it shows all files in this directory</p>
-
-<pre><code>    git init 
-</code></pre>
-
-<p>// it means that you Initialise Git-Repository</p>
-
-<pre><code>    git status
-</code></pre>
-
-<p>// it shows the status</p>
-
-<figure>
-<img src="resources/img/git-init.png" alt="git-init" id="git-init" style="width:980px;" />
-<figcaption>git-init</figcaption></figure>
-
-
-
-<h4 id="createyournewrepositoryingithub:">2. Create your new Repository in GitHub:</h4>
+<h3 id="createyournewrepositoryingithub:">1. Create your new Repository in GitHub:</h3>
 
 <ul>
 <li>Login you at GitHub</li>
 <li>Click upper right on book icon &#8220;Create a new repo&#8221;;</li>
-<li>Write the name of repository (for example: Test-VRL-Tutorial-Plugin&#8211;01):</li>
+<li>Write the name of repository (for example: Your-Repository&#8211;01):</li>
 </ul>
 
 <figure>
@@ -230,46 +200,72 @@ public void init(InitPluginAPI iApi) {
 
 
 <ul>
-<li><p>-&gt;<code>Create repository</code> </p>
-
-<h4 id="commitingyournewpluginorchangingversioningithub:">3. Commiting your new Plugin (or changing version) in GitHub:</h4></li>
+<li><p>-&gt;<code>Create repository</code> </p></li>
+<li><p>copy the git-adress (for git remote add &#8230;):</p></li>
 </ul>
 
-<p>Write next in Terminal:</p>
+<figure>
+<img src="resources/img/git-address.png" alt="git-address" id="git-address" style="width:980px;" />
+<figcaption>git-address</figcaption></figure>
 
-<pre><code>    git fetch 
+
+
+<h3 id="initializeagitrepositoryfortheprojectlocalandpushittogithub:">2. Initialize a git repository for the project local and push it to github:</h3>
+
+<p>Open the Terminal on your computer and write:</p>
+
+<pre><code>    cd NetBeansProjects/Test-VRL-Tut-Plugin-01 
 </code></pre>
 
-<p>// it means that the files fetched from Local repository into Git;</p>
+<p>// it means that you go to the directory where your plugin is located, the Adress you can see in NetBeans in Project Properties;</p>
 
-<pre><code>    git pull origin master
+<figure>
+<img src="resources/img/git-init.png" alt="git-init" id="git-init" style="width:980px;" />
+<figcaption>git-init</figcaption></figure>
+
+
+
+<pre><code>    git init 
 </code></pre>
 
-<p>// it means that the files fetched from Git into Workspace;</p>
+<p>// it means that you Initialise Git-Repository local;</p>
 
-<pre><code>    git add
-    git status
-    git git commit -m &quot;first commit&quot;
+<pre><code>    git add .
+    git commit -a -m &quot;your commentar&quot;
+    git remote add origin git@github.com:Elena23/Your-Repository-01.git
+    git push -u origin master 
 </code></pre>
 
-<p>// it commited the files</p>
+<p>// Initialize a new git repository local, then stage all the files in the directory, then commit the initial snapshot and finally push it into GitHub;</p>
 
-<pre><code>    git push origin master
+<h4 id="finishnowisyourpluginingithub">Finish! Now is your plugin in GitHub!</h4>
+
+<p>This commands can help you: </p>
+
+<pre><code>    cd ../ 
 </code></pre>
 
-<p>// it pushed the files into branch master</p>
+<p>// to back out one level out of the current directory;</p>
 
-<p>Finish! Now is your plugin in GitHub! </p>
+<pre><code>    ls -la
+</code></pre>
 
-<hr />
+<p>// it shows all files in this directory;</p>
 
-<h2 id="commitingyournewpluginintogithubfromnetbeans:">Commiting your new Plugin into GitHub from NetBeans:</h2>
+<pre><code>    git status
+</code></pre>
 
-<ul>
-<li>VRL-Tutorial-Plugin&#8211;01 -&gt; Git -&gt; Add;</li>
-<li>VRL-Tutorial-Plugin&#8211;01 -&gt; Git -&gt; Commit&#8230;;</li>
-<li>VRL-Tutorial-Plugin&#8211;01 -&gt; Git -&gt; Checkout -&gt; Checkout Revision&#8230; ; Reveision:master -&gt; Select -&gt; Checkout</li>
-</ul>
+<p>// it shows the status;</p>
+
+<pre><code>    man git 
+</code></pre>
+
+<p>// this is Git Manual </p>
+
+<p>//Click &#8216;q&#8217; to get out of Manual;</p>
+
+<p>For other Git-Commands look here:<br/>
+<a href="https://na1.salesforce.com/help/doc/en/salesforce_git_developer_cheatsheet.pdf">Git Cheat Sheet</a></p>
 
 </body>
 </html>
