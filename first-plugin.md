@@ -155,7 +155,7 @@ To export your whole VRL-Project (with plugins):
 -----
 
 
-####you can also load the example plugin from GitHub:  [Test-VRL-Tut-Plugin-01.zip](https://github.com/Elena23/VRL-Tutorials/blob/master/Test-VRL-Tut-Plugin-01.zip) ####
+####you can also load the example plugin from GitHub:  [Test-VRL-Tut-Plugin-01.zip](https://github.com/Elena23/VRL-Tutorials/blob/master/Test-VRL-Tut-Plugin–01.zip) ####
 
 
 ## Commiting your new Plugin in GitHub [Commiting your new Plugin in GitHub]##
