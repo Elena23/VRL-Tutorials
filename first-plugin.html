@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link type="text/css" rel="stylesheet" href="resources/css/vrl-documentation.css"/>
+</head>
+<body>
+
+<h1 id="createyourfirstvrl-plugin">Create your first VRL - Plugin</h1>
+
+<h2 id="content">Content</h2>
+
+<p>In this tutorial you will learn to:</p>
+
+<ul>
+<li><a href="#createavrl-plugin">Create a VRL - Plugin</a> with a simple String;</li>
+<li><a href="#commitingyournewpluginingithub">Commiting your new Plugin in GitHub</a>;</li>
+</ul>
+
+<h2 id="createavrl-plugin">Create a VRL - Plugin</h2>
+
+<ul>
+<li><p>NetBeans -&gt; File -&gt; New Project&#8230; -&gt; Categories: java; Projects: Java Application -&gt; Next -&gt; Project Name: (for example: Test-VRL-Tutorial-Plugin&#8211;01); Create Main Class: (for example: edu.gcsc.vrl.tutorial.TestTutorialComponent01) -&gt; <code>Finish</code></p></li>
+<li><p>In Projects: Plugin&#8211;01 -&gt; Libraries: right mouse click -&gt; Add Project&#8230; -&gt; VRL - dist/VRL.jar -&gt; OK.</p></li>
+<li><p>Important is in Project Properties: Source JDK 1.6;</p></li>
+</ul>
+
+<figure>
+<img src="resources/img/tut-component-01.png" alt="tut-component-01" id="tut-component-01" style="width:980px;" />
+<figcaption>tut-component&#8211;01</figcaption></figure>
+
+
+
+<p>We open TestTutorialComponent01.java and write:</p>
+
+<pre><code>package edu.gcsc.vrl.tutorial;
+
+import eu.mihosoft.vrl.annotation.ComponentInfo;
+import java.io.Serializable;
+
+@ComponentInfo(name=&quot;TestTutorialComponent01&quot;, 
+        category=&quot;TestTutorialPlugin/01&quot;, 
+        description=&quot;My Component&quot;)
+
+public class TestTutorialComponent01 implements Serializable{
+
+
+    private static final long serialVersionUID = 1L;
+
+
+    public String doSomething() {
+        return &quot;Congratulation! &quot;
+                + &quot;Your new project work!&quot;;
+    }
+}
+</code></pre>
+
+<p>Then we create TutorialPluginConfigurator.java and copy the code:</p>
+
+<ul>
+<li>du.gcsc.vrl.tutorial -&gt; right mouse click -&gt; New -&gt; Java class -&gt; Class Name: (for example: TestTutorialPluginConfigurator) -&gt; <code>Finish</code></li>
+</ul>
+
+<figure>
+<img src="resources/img/createTutConfConfigurator.png" alt="create TutorialPluginConfigurator" id="createtutorialpluginconfigurator" style="width:980px;" />
+<figcaption>create TutorialPluginConfigurator</figcaption></figure>
+
+
+
+<pre><code>package edu.gcsc.vrl.tutorial;
+
+import eu.mihosoft.vrl.system.InitPluginAPI;
+import eu.mihosoft.vrl.system.PluginAPI;
+import eu.mihosoft.vrl.system.PluginIdentifier;
+import eu.mihosoft.vrl.system.VPluginAPI;
+import eu.mihosoft.vrl.system.VPluginConfigurator;
+
+/**
+*
+* @author Michael Hoffer &lt;info@michaelhoffer.de&gt;
+*/
+
+public class TestTutorialPluginConfigurator extends VPluginConfigurator{
+
+public TestTutorialPluginConfigurator() {
+    //specify the plugin name and version
+   setIdentifier(new PluginIdentifier(&quot;TestTutorial-Plugin01&quot;, &quot;0.1&quot;));
+
+   // describe the plugin
+   setDescription(&quot;Plugin Description&quot;);
+
+   // copyright info
+   setCopyrightInfo(&quot;Sample-Plugin&quot;,
+           &quot;(c) Your Name&quot;,
+           &quot;www.you.com&quot;, &quot;License Name&quot;, &quot;License Text...&quot;);
+}
+
+@Override
+public void register(PluginAPI api) {
+
+   // register plugin with canvas
+   if (api instanceof VPluginAPI) {
+       VPluginAPI vapi = (VPluginAPI) api;
+       vapi.addComponent(TutorialComponent01.class);
+       }
+}
+
+@Override
+public void unregister(PluginAPI api) {
+   // nothing to unregister
+}
+
+@Override
+public void init(InitPluginAPI iApi) {
+   // nothing to init
+  }
+}
+</code></pre>
+
+<ul>
+<li><p>Test-VRL-Tutorial-Plugin&#8211;01 -&gt; Build;</p></li>
+<li><p>VRL-Studion -&gt; Run</p></li>
+<li><p><code>Create</code> your new project</p></li>
+</ul>
+
+<figure>
+<img src="resources/img/create-VRL-Studio-project.png" alt="create VRL-Studio project" id="createvrl-studioproject" style="width:980px;" />
+<figcaption>create VRL-Studio project</figcaption></figure>
+
+
+
+<ul>
+<li>Save for example as &#8220;Test-VRL-Tut&#8211;01&#8221;;</li>
+<li>(in top-menu) Plugins -&gt; Install Plugin -&gt; (search in &#8220;NetBeans&#8221;, in your project &#8220;Test-VRL-Tut&#8211;01/dist&#8221; the file &#8220;Test-VRL-Tut-Plugin&#8211;01.jar&#8221;)
+/Users/userNN/NetBeansProjects/Test-VRL-Tut&#8211;01/dist/Test-VRL-Tut&#8211;01.jar
+-&gt; open</li>
+</ul>
+
+<figure>
+<img src="resources/img/instal-plugin.png" alt="instal plugin" id="instalplugin" style="width:980px;" />
+<figcaption>instal plugin</figcaption></figure>
+
+
+
+<ul>
+<li>Save your project.</li>
+<li>Restart VRL-Studio to use the plugins;</li>
+<li>open your new project &#8220;Test-VRL-Tut&#8211;01.vrlp&#8221;;</li>
+<li>(in top-menu) File -&gt; Select Plugins</li>
+</ul>
+
+<figure>
+<img src="resources/img/select-plugins.png" alt="select plugins" id="selectplugins" style="width:980px;" />
+<figcaption>select plugins</figcaption></figure>
+
+
+
+<ul>
+<li><p>(select the plugins you need) -&gt; OK</p></li>
+<li><p>(right mouse-click in VRL) -&gt; Manage Components</p></li>
+<li><p>Now you have your new Plugin in &#8220;Manage Components&#8221; -&gt; Components -&gt; TestTutorialPlugin -&gt; 01 -&gt; TestTutorialComponent01;</p></li>
+<li><p>pull your new plugin &#8220;TutorialComponent01&#8221; into development area and click <code>invoke</code>;</p></li>
+<li><p>you get your text in the plugin: &#8220;Congratulations! Your new project work!&#8221;</p></li>
+</ul>
+
+<figure>
+<img src="resources/img/plugin-ready.png" alt="plugin-ready" id="plugin-ready" style="width:980px;" />
+<figcaption>plugin-ready</figcaption></figure>
+
+
+
+<p>That means that your plugin works! ;)</p>
+
+<hr />
+
+<p>To export your whole VRL-Project (with plugins):</p>
+
+<ul>
+<li>(in top-menu VRL-Studio) -&gt; File -&gt; Export Project -&gt; <code>Yes</code> -&gt; FileName.vrlp -&gt; Save</li>
+</ul>
+
+<hr />
+
+<h4 id="youcanalsoloadtheexamplepluginfromgithub:vrl-tutorial-plugin-01.git">you can also load the example plugin from GitHub: <a href="https://github.com/Elena23/VRL-Tutorial-Plugin-01.git">VRL-Tutorial-Plugin&#8211;01.git</a></h4>
+
+<h2 id="commitingyournewpluginingithub">Commiting your new Plugin in GitHub</h2>
+
+<h4 id="initialisegit-repositorylocal:">1. Initialise Git-Repository local:</h4>
+
+<p>Open the Terminal and write:</p>
+
+<pre><code>    cd NetBeansProjects/Test-VRL-Tut-Plugin-01 
+</code></pre>
+
+<p>// it means that you go to the directory where your plugin is located, the Adress you can see in NetBeans in Project Properties;</p>
+
+<pre><code>    ls -la
+</code></pre>
+
+<p>// it shows all files in this directory</p>
+
+<pre><code>    git init 
+</code></pre>
+
+<p>// it means that you Initialise Git-Repository</p>
+
+<pre><code>    git status
+</code></pre>
+
+<p>// it shows the status</p>
+
+<figure>
+<img src="resources/img/git-init.png" alt="git-init" id="git-init" style="width:980px;" />
+<figcaption>git-init</figcaption></figure>
+
+
+
+<h4 id="createyournewrepositoryingithub:">2. Create your new Repository in GitHub:</h4>
+
+<ul>
+<li>Login you at GitHub</li>
+<li>Click upper right on book icon &#8220;Create a new repo&#8221;;</li>
+<li>Write the name of repository (for example: Test-VRL-Tutorial-Plugin&#8211;01):</li>
+</ul>
+
+<figure>
+<img src="resources/img/create-repository.png" alt="create-repository" id="create-repository" style="width:980px;" />
+<figcaption>create-repository</figcaption></figure>
+
+
+
+<ul>
+<li><p>-&gt;<code>Create repository</code> </p>
+
+<h4 id="commitingyournewpluginorchangingversioningithub:">3. Commiting your new Plugin (or changing version) in GitHub:</h4></li>
+</ul>
+
+<p>Write next in Terminal:</p>
+
+<pre><code>    git fetch 
+</code></pre>
+
+<p>// it means that the files fetched from Local repository into Git;</p>
+
+<pre><code>    git pull origin master
+</code></pre>
+
+<p>// it means that the files fetched from Git into Workspace;</p>
+
+<pre><code>    git add
+    git status
+    git git commit -m &quot;first commit&quot;
+</code></pre>
+
+<p>// it commited the files</p>
+
+<pre><code>    git push origin master
+</code></pre>
+
+<p>// it pushed the files into branch master</p>
+
+<p>Finish! Now is your plugin in GitHub! </p>
+
+<hr />
+
+<h2 id="commitingyournewpluginintogithubfromnetbeans:">Commiting your new Plugin into GitHub from NetBeans:</h2>
+
+<ul>
+<li>VRL-Tutorial-Plugin&#8211;01 -&gt; Git -&gt; Add;</li>
+<li>VRL-Tutorial-Plugin&#8211;01 -&gt; Git -&gt; Commit&#8230;;</li>
+<li>VRL-Tutorial-Plugin&#8211;01 -&gt; Git -&gt; Checkout -&gt; Checkout Revision&#8230; ; Reveision:master -&gt; Select -&gt; Checkout</li>
+</ul>
+
+</body>
+</html>
