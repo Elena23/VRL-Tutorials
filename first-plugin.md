@@ -7,7 +7,7 @@ CSS:        resources/css/vrl-documentation.css
 In this tutorial you will learn to:
 
 - [Create a VRL - Plugin] with a simple String;
-- [Commiting your new Plugin in GitHub];
+- [Committing your new Plugin to GitHub];
 
 
 ## Create a VRL - Plugin [Create a VRL - Plugin] ##
@@ -41,8 +41,8 @@ We open TestTutorialComponent01.java and write:
     
     
 	    public String doSomething() {
-	        return "Congratulation! "
-	                + "Your new project work!";
+	        return "Congratulations! "
+	                + "Your new project works!";
 	    }
 	}
 
@@ -137,7 +137,7 @@ Then we create TutorialPluginConfigurator.java and copy the code:
 - Now you have your new Plugin in "Manage Components" -> Components -> TestTutorialPlugin -> 01 -> TestTutorialComponent01;
 
 - pull your new plugin "TutorialComponent01" into development area and click `invoke`;
-- you get your text in the plugin: "Congratulations! Your new project work!"
+- you will get your text in the plugin: "Congratulations! Your new project works!"
 
 ![plugin-ready][]
 
@@ -158,7 +158,7 @@ To export your whole VRL-Project (with plugins):
 ####you can also load the example plugin from GitHub:  [Test-VRL-Tut-Plugin-01.zip](https://github.com/Elena23/VRL-Tutorials/blob/master/Test-VRL-Tut-Plugin–01.zip) ####
 
 
-## Commiting your new Plugin in GitHub [Commiting your new Plugin in GitHub]##
+## Committing your new Plugin to GitHub [Committing your new Plugin to GitHub]##
 
 ###1. Create your new Repository in GitHub:###
 
@@ -181,10 +181,10 @@ To export your whole VRL-Project (with plugins):
 
 ###2. Initialize a git repository for the project local and push it to github:###
 
- Open the Terminal on your computer and write:
+ Open the Terminal on your computer and write the address of your project in NetBeans, for example:
 
 		cd NetBeansProjects/Test-VRL-Tut-Plugin-01 
-// it means that you go to the directory where your plugin is located, the Adress you can see in NetBeans in Project Properties;
+// it means that you go to the directory where your plugin is located, you can see the address in NetBeans in Project Properties;
 
 ![git-init][]
 
@@ -195,12 +195,12 @@ To export your whole VRL-Project (with plugins):
   		   
 		git add .
 		git commit -a -m "your commentar"
-		git remote add origin git@github.com:Elena23/Your-Repository-01.git
+		git remote set-url origin git@github.com:Elena23/Test-VRL-Tut-Plugin-01.git
 		git push -u origin master 
- // Initialize a new git repository local, then stage all the files in the directory, then commit the initial snapshot and finally push it into GitHub;
+ // Initialize a new git repository local, then stage all the files in the directory, then commit the initial snapshot and finally push it into GitHub branch master;
   
 
-####Finish! Now is your plugin in GitHub!###
+####Finished! Now your plugin is in GitHub!###
   
   
   

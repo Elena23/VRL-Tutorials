@@ -14,7 +14,7 @@
 
 <ul>
 <li><a href="#createavrl-plugin">Create a VRL - Plugin</a> with a simple String;</li>
-<li><a href="#commitingyournewpluginingithub">Commiting your new Plugin in GitHub</a>;</li>
+<li><a href="#committingyournewplugintogithub">Committing your new Plugin to GitHub</a>;</li>
 </ul>
 
 <h2 id="createavrl-plugin">Create a VRL - Plugin</h2>
@@ -49,8 +49,8 @@ public class TestTutorialComponent01 implements Serializable{
 
 
     public String doSomething() {
-        return &quot;Congratulation! &quot;
-                + &quot;Your new project work!&quot;;
+        return &quot;Congratulations! &quot;
+                + &quot;Your new project works!&quot;;
     }
 }
 </code></pre>
@@ -160,7 +160,7 @@ public void init(InitPluginAPI iApi) {
 <li><p>(right mouse-click in VRL) -&gt; Manage Components</p></li>
 <li><p>Now you have your new Plugin in &#8220;Manage Components&#8221; -&gt; Components -&gt; TestTutorialPlugin -&gt; 01 -&gt; TestTutorialComponent01;</p></li>
 <li><p>pull your new plugin &#8220;TutorialComponent01&#8221; into development area and click <code>invoke</code>;</p></li>
-<li><p>you get your text in the plugin: &#8220;Congratulations! Your new project work!&#8221;</p></li>
+<li><p>you will get your text in the plugin: &#8220;Congratulations! Your new project works!&#8221;</p></li>
 </ul>
 
 <figure>
@@ -183,7 +183,7 @@ public void init(InitPluginAPI iApi) {
 
 <h4 id="youcanalsoloadtheexamplepluginfromgithub:test-vrl-tut-plugin-01.zip">you can also load the example plugin from GitHub: <a href="https://github.com/Elena23/VRL-Tutorials/blob/master/Test-VRL-Tut-Plugin–01.zip">Test-VRL-Tut-Plugin&#8211;01.zip</a></h4>
 
-<h2 id="commitingyournewpluginingithub">Commiting your new Plugin in GitHub</h2>
+<h2 id="committingyournewplugintogithub">Committing your new Plugin to GitHub</h2>
 
 <h3 id="createyournewrepositoryingithub:">1. Create your new Repository in GitHub:</h3>
 
@@ -212,12 +212,12 @@ public void init(InitPluginAPI iApi) {
 
 <h3 id="initializeagitrepositoryfortheprojectlocalandpushittogithub:">2. Initialize a git repository for the project local and push it to github:</h3>
 
-<p>Open the Terminal on your computer and write:</p>
+<p>Open the Terminal on your computer and write the address of your project in NetBeans, for example:</p>
 
 <pre><code>    cd NetBeansProjects/Test-VRL-Tut-Plugin-01 
 </code></pre>
 
-<p>// it means that you go to the directory where your plugin is located, the Adress you can see in NetBeans in Project Properties;</p>
+<p>// it means that you go to the directory where your plugin is located, you can see the address in NetBeans in Project Properties;</p>
 
 <figure>
 <img src="resources/img/git-init.png" alt="git-init" id="git-init" style="width:980px;" />
@@ -232,13 +232,13 @@ public void init(InitPluginAPI iApi) {
 
 <pre><code>    git add .
     git commit -a -m &quot;your commentar&quot;
-    git remote add origin git@github.com:Elena23/Your-Repository-01.git
+    git remote set-url origin git@github.com:Elena23/Test-VRL-Tut-Plugin-01.git
     git push -u origin master 
 </code></pre>
 
-<p>// Initialize a new git repository local, then stage all the files in the directory, then commit the initial snapshot and finally push it into GitHub;</p>
+<p>// Initialize a new git repository local, then stage all the files in the directory, then commit the initial snapshot and finally push it into GitHub branch master;</p>
 
-<h4 id="finishnowisyourpluginingithub">Finish! Now is your plugin in GitHub!</h4>
+<h4 id="finishednowyourpluginisingithub">Finished! Now your plugin is in GitHub!</h4>
 
 <p>This commands can help you: </p>
 
